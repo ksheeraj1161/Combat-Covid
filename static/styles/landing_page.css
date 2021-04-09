@@ -1,0 +1,154 @@
+body {
+  background-color: white;
+  width: fit-content;
+}
+
+.whatdiv {
+  margin-top: 0px;
+  background: url("../images/corona.png") 50% fixed;
+}
+.navbar {
+  width: 100%;
+  height: 15rem;
+}
+
+.row {
+  margin-right: 0px !important;
+}
+
+.item {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 5rem;
+}
+img {
+  width: 5rem;
+  height: 5rem;
+  background-color: black;
+  border-radius: 10%;
+}
+.caption {
+  display: block;
+  color: black;
+  font-size: 1rem;
+}
+
+figcaption {
+  color: black;
+}
+
+figure:hover > figcaption {
+  font-size: 1.1rem;
+}
+
+figure:hover > img {
+  border: 5px black solid;
+}
+
+.heading-quest {
+  height: 5rem;
+  font-family: "Heebo";
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+
+.row {
+  background-color: white;
+}
+
+.row h1 {
+  font-size: 2rem;
+  font-family: "Heebo", sans-serif;
+  font-weight: 100;
+  padding-top: 5px;
+  text-decoration: underline;
+  text-decoration-color: rgb(230, 230, 230);
+  text-decoration-style: double;
+}
+
+#remove-button {
+  background: #0062cc;
+  color: white;
+}
+
+.yellow {
+  background-color: white;
+}
+
+.texty-font {
+  font-family: "Noto Sans HK", sans-serif;
+  font-size: 1rem;
+  padding: 10px 7px 10px 10px;
+}
+
+code {
+  color: #2e2f3e;
+  background-color: #f7e5ce;
+  padding: 1.76px 5.28px 1.82px;
+  font-family: "Inconsolata", monospace;
+}
+
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+  color: rgb(73, 73, 73);
+  border-bottom-color: rgb(73, 73, 73);
+}
+
+@media only screen and (max-width: 768px) {
+  .heading-quest {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .item {
+    width: 6rem;
+    margin-top: -35px;
+  }
+
+  .navbar {
+    height: 6rem;
+    margin-bottom: 10px;
+  }
+
+  .row h1 {
+    font-size: 1.5rem;
+  }
+
+  .texty-font {
+    font-size: 0.9rem;
+  }
+
+  .collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+}
