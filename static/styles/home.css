@@ -1,0 +1,9 @@
+.Global,.Local{
+    border-right:  1px solid #d1d3d4;
+}
+h2{
+    font-size: small;
+}
+.LocalItem{
+    border-bottom: 1px solid #d1d3d4;
+}
