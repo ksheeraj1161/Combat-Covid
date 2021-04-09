@@ -1,0 +1,127 @@
+
+<head>
+  <title>Combat Covid|CT Upload Form</title>
+
+  <link
+    href="static/styles/form.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+</head>
+<body>
+
+  <nav id ="navbar" class=" navbar navbar-expand navbar-light align-items-start">
+    <div class="container d-flex justify-content-center align-items-start figs">
+        <div class="row align-items-start">
+            <a href="form.html">
+                <figure class="item">
+                    <img class="imgNavbar" src="static/images/forms.png"/>
+                    <figcaption class="caption">Symptoms Form</figcaption>
+                </figure>
+            </a>
+            <a href="landing_page.html">
+                <figure class="item">
+                    <img class="imgNavbar" src="static/images/covid-19.png"/>
+                    <figcaption class="caption">Home</figcaption>
+                </figure>
+            </a>
+            <a href="audio_form.html">
+              <figure class="item"> 
+                  <img class="imgNavbar" src="static/images/headphone.png"/>
+                  <figcaption class="caption">Audio Form</figcaption>
+              </figure>
+          </a>
+        </div>
+        </div>
+    </div>
+</nav>
+  <div class="container contact-form">
+    <div class="contact-image">
+      <img
+        id="heart"
+        src="https://cdn0.iconfinder.com/data/icons/health-care-21/128/2-512.png"
+      />
+    </div>
+    <form method="post" action="/ctupload" enctype="multipart/form-data">
+      <h3 id="main-heading">COVID-19 CT Upload Form</h3>
+      <hr />
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="form-group">
+            <input
+              type="text"
+              id="inputId"
+              name="id"
+              class="form-control"
+              placeholder="ID"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              id="inputEmail"
+              name="email"
+              class="form-control"
+              placeholder="Email"
+            />
+          </div> 
+
+          <h2>Upload Patient's CT Scan Here</h2>
+          <div class="form-group">
+            <input
+              type="file"
+              id="inputFile"
+              class="form-control"
+              name="ct_scan"
+            />
+          </div>
+          <div
+            aria-labelledby="myModalLabel"
+            class="modal fade"
+            id="overlayModal"
+            role="dialog"
+            tabindex="-1"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="alert">
+                    Are you sure you want to submit the form? (You can't come
+                    back to this page)
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <input type="hidden" id="RowId" value="" />
+                  <button
+                    class="btn btn-default"
+                    data-dismiss="modal"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                  <button class="btn" id="submit-button" type="submit">
+                    Yes, submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div
+              data-toggle="modal"
+              data-target="#overlayModal"
+              name="btnSubmit"
+              class="btnContact"
+              style="text-align: center;"
+            >
+              Submit
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+<script src="static/javascript/form.js"></script>
+

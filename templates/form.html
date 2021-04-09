@@ -1,0 +1,1475 @@
+<head>
+  <title>Combat Covid|Data Form</title>
+
+  <link
+    href="static/styles/form.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+</head>
+<body>
+
+  <nav id ="navbar" class=" navbar navbar-expand navbar-light align-items-start">
+    <div class="container d-flex justify-content-center align-items-start figs">
+        <div class="row align-items-start">
+            <a href="form.html">
+                <figure class="item">
+                    <img class="imgNavbar" src="static/images/forms.png"/>
+                    <figcaption class="caption">Symptoms Form</figcaption>
+                </figure>
+            </a>
+            <a href="landing_page.html">
+                <figure class="item">
+                    <img class="imgNavbar" src="static/images/covid-19.png"/>
+                    <figcaption class="caption">Home</figcaption>
+                </figure>
+            </a>
+            <a href="audio_form.html">
+                <figure class="item"> 
+                    <img class="imgNavbar" src="static/images/headphone.png"/>
+                    <figcaption class="caption">Audio Form</figcaption>
+                </figure>
+            </a>
+        </div>
+        </div>
+    </div>
+</nav>
+  <div class="container contact-form">
+    <div class="contact-image">
+      <img
+        id="heart"
+        src="https://www.flaticon.com/premium-icon/icons/svg/2781/2781395.svg"
+      />
+    </div>
+    <form method="post" action="/clinicalupload" enctype="multipart/form-data">
+      <h3 id="main-heading">COVID-19 Symptoms Form</h3>
+      <div class="alert alert-info alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close"
+          >&times;</a
+        >
+        <strong>Info!</strong> Please feel free to to fill out the information
+        you are comfortable with.
+      </div>
+      <div class="alert alert-warning alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close"
+          >&times;</a
+        >
+        <strong>Warning!</strong> The data entered here will be open-source.
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xl-3">
+                <br />
+                <h4>Sex:</h4>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+                  <input type="radio" id="inputMale" name="gender" value="male" onclick="ClearRd(this)" />
+                  <label for="inputMale">Male</label><br />
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputFemale"
+                    name="gender"
+                    value="female"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputFemale">Female</label><br />
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputOther"
+                    name="gender"
+                    value="other"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputOther">Other</label><br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <div class="form-group">
+            <input
+              type="email"
+              id="inputEmail"
+              name="email"
+              class="form-control"
+              placeholder="Email"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="number"
+              id="inputAge"
+              name="age"
+              class="form-control"
+              placeholder="Age"
+              min="0"
+              max="120"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="number"
+              id="inputHeight"
+              name="height"
+              class="form-control"
+              placeholder="Height (in m)"
+              min="0"
+              step=".01"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="number"
+              id="inputWeight"
+              name="weight"
+              class="form-control"
+              placeholder="Weight (in kg)"
+              min="0"
+              step=".01"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="inputOccupation"
+              name="occupation"
+              class="form-control"
+              placeholder="Occupation"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="inputCity"
+              name="city"
+              class="form-control"
+              placeholder="City"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="inputCountry"
+              name="country"
+              class="form-control"
+              placeholder="Country"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="number"
+              id="inputPeopleInHousehold"
+              name="people_in_household"
+              class="form-control"
+              placeholder="People in the household"
+              min="0"
+            />
+          </div>
+          <br />
+          <hr />
+          <h2>Personal Information</h2>
+          <div class="form-group">
+            <input
+              type="text"
+              id="inputDiseaseMedication"
+              name="disease_medication"
+              class="form-control"
+              placeholder="Medication being taken for any diseases"
+            />
+          </div>
+          <div class="form-group">
+              <div class="row">
+                <div class="col-xl-6 extra">
+                  <h4>Diet:</h4>
+                </div>
+                <div class="col-xl-2">
+
+            <div class="radio_bool">
+                  <input
+                    type="radio"
+                    name="diet"
+                    value="null"
+                    checked="checked"
+                  />
+                  <input
+                    type="radio"
+                    id="inputDiet1"
+                    name="diet"
+                    value="veg"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputDiet1">Veg</label><br />
+                  </div>
+                </div>
+                <div class="col-xl-3">
+
+            <div class="radio_bool">
+                  <input
+                    type="radio"
+                    id="inputDiet2"
+                    name="diet"
+                    value="non_veg"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputDiet2">Non-Veg</label><br />
+                </div>
+                </div>
+              </div>
+          </div>
+          <div class="form-group">
+              <div class="row" style="padding-top: 50px;">
+                <div class="col-xl-6 extra">
+                  <h4>Sleeping Patterns:</h4>
+                </div>
+                <div class="col-xl-2">
+                  <div class="radio_bool">
+                  <input
+                    type="radio"
+                    name="sleeping_pattern"
+                    value="null"
+                    checked="checked"
+                  />
+                  <input
+                    type="radio"
+                    id="inputSleepingPattern1"
+                    name="sleeping_pattern"
+                    value="normal"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputSleepingPattern1">Normal</label><br />
+                </div>
+                </div>
+                <div class="col-xl-1">
+
+            <div class="radio_bool">
+                  <input
+                    type="radio"
+                    id="inputSleepingPattern2"
+                    name="sleeping_pattern"
+                    value="abnormal"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputSleepingPattern2">Abnormal</label><br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+              <div class="row" style="padding-top: 50px;">
+                <div class="col-xl-6 extra">
+                  <h4>Appetite:</h4>
+                </div>
+                <div class="col-xl-2">
+
+            <div class="radio_bool">
+                  <input
+                    type="radio"
+                    name="appetite"
+                    value="null"
+                    checked="checked"
+                  />
+                  <input
+                    type="radio"
+                    id="inputAppetite1"
+                    name="appetite"
+                    value="normal"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputAppetite1">Normal</label><br />
+                </div>
+                </div>
+                <div class="col-xl-1">
+
+            <div class="radio_bool">
+                  <input
+                    type="radio"
+                    id="inputAppetite2"
+                    name="appetite"
+                    value="abnormal"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputAppetite2">Abnormal</label><br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+              <div class="row" style="padding-top: 50px;">
+                <div class="col-xl-6 extra">
+                  <h4>Bowel and Bladder Movement:</h4>
+                </div>
+                <div class="col-xl-2">
+                  <div class="radio_bool">
+                  <input
+                    type="radio"
+                    name="bowel_bladder"
+                    value="null"
+                    checked="checked"
+                  />
+                  <input
+                    type="radio"
+                    id="inputBowelBladder1"
+                    name="bowel_bladder"
+                    value="normal"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputBowelBladder1">Normal</label><br />
+                </div>
+                </div>
+                <div class="col-xl-1">
+
+            <div class="radio_bool">
+                  <input
+                    type="radio"
+                    id="inputBowelBladder2"
+                    name="bowel_bladder"
+                    value="abnormal"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputBowelBladder2">Abnormal</label><br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <br/>
+          <hr style="border-top: 1px dashed gray;">
+          <h4>
+            Do you consume alcohol ?
+          </h4>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xl-1"></div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    checked="checked"
+                    name="alcohol_intake"
+                    value="null"
+                  />
+                  <input
+                    type="radio"
+                    id="inputAlcoholNever"
+                    name="alcohol_intake"
+                    value="never"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputAlcoholNever">Never</label><br />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputAlcoholSpecial"
+                    name="alcohol_intake"
+                    value="occasionally"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputAlcoholSpecial">Occasionally</label><br />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputAlcoholMonthly"
+                    name="alcohol_intake"
+                    value="monthly"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputAlcoholMonthly">Monthly</label><br />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputAlcoholWeekly"
+                    name="alcohol_intake"
+                    value="weekly"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputAlcoholWeekly">Weekly</label><br />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputAlcoholDaily"
+                    name="alcohol_intake"
+                    value="daily"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputAlcoholDaily">Daily</label><br />
+                </div>
+              </div>
+              </div>
+            </div>
+          <br/>
+          <br/>
+          <hr style="border-top: 1px dashed gray;">
+          <h4>
+            Do you smoke or use tobacco?
+          </h4>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xl-1"></div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    checked="checked"
+                    name="smoke_intake"
+                    value="null"
+                  />
+                  <input
+                    type="radio"
+                    id="inputSmokeNever"
+                    name="smoke_intake"
+                    value="never"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputSmokeNever">Never</label><br />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputSmokeSpecial"
+                    name="smoke_intake"
+                    value="occasionally"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputSmokeSpecial">Occasionally</label><br />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputSmokeMonthly"
+                    name="smoke_intake"
+                    value="monthly"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputSmokeMonthly">Monthly</label><br />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputSmokeWeekly"
+                    name="smoke_intake"
+                    value="weekly"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputSmokeWeekly">Weekly</label><br />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputSmokeDaily"
+                    name="smoke_intake"
+                    value="daily"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputSmokeDaily">Daily</label><br />
+                </div>
+              </div>
+              </div>
+            </div>
+          <br/>
+          <br/>
+          <hr style="border-top: 1px dashed gray;">
+          <h4>
+            Are you feeling nervous, anxious or tense as compared to before the pandemic?
+          </h4>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    checked="checked"
+                    name="nervous"
+                    value="null"
+                  />
+                  <input
+                    type="radio"
+                    id="inputMentalNotAtAll"
+                    name="nervous"
+                    value="not_at_all"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputMentalNotAtAll">Not At All</label><br />
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+                  
+                  
+                  <input
+                    type="radio"
+                    id="inputMentalVeryFewDays"
+                    name="nervous"
+                    value="very_few_days"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputMentalVeryFewDays">Very Few Days</label><br />
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+
+                  <input
+                    type="radio"
+                    id="inputMentalSeveralDays"
+                    name="nervous"
+                    value="several_days"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputMentalSeveralDays">Several Days</label><br />
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+                  
+                  <input
+                    type="radio"
+                    id="inputMentalAlmostEveryDay"
+                    name="nervous"
+                    value="almost_every_day"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputMentalAlmostEveryDay">Almost Every Day</label><br />
+                </div>
+              </div>
+              </div>
+            </div>
+            
+          <div class="row" style="padding-top: 110px;"></div>          
+          <hr style="border-top: 1px dashed gray;">          
+          <h4>
+            In the last month/week how often have you felt confident about your ability to handle personal problems?
+          </h4>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    checked="checked"
+                    name="personal_problem"
+                    value="null"
+                  />
+                  <input
+                    type="radio"
+                    id="inputPersonalNever"
+                    name="personal_problem"
+                    value="never"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputPersonalNever">Never</label><br />
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputPersonalRarely"
+                    name="personal_problem"
+                    value="rarely"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputPersonalRarely">Rarely</label><br />
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputPersonalSometimes"
+                    name="personal_problem"
+                    value="sometimes"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputPersonalSometimes">Sometimes</label><br />
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputPersonalOften"
+                    name="personal_problem"
+                    value="often"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputPersonalOften">Often</label><br />
+                </div>
+              </div>
+              </div>
+            </div>
+          <br />
+          <br />
+          <hr style="border-top: 1px dashed gray;">
+          <h4>
+            In the last month or week, how often have you been stressed for not being able to cope up with studies and enjoy your hobbies?
+          </h4>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    checked="checked"
+                    name="stressed"
+                    value="null"
+                  />
+                  <input
+                    type="radio"
+                    id="inputStressedNever"
+                    name="stressed"
+                    value="never"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputStressedNever">Never</label><br />
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputStressedRarely"
+                    name="stressed"
+                    value="rarely"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputStressedRarely">Rarely</label><br />
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputStressedSometimes"
+                    name="stressed"
+                    value="sometimes"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputStressedSometimes">Sometimes</label><br />
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    id="inputStressedOften"
+                    name="stressed"
+                    value="often"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputStressedOften">Often</label><br />
+                </div>
+              </div>
+              </div>
+            </div>
+            <br />
+          <br />
+          <hr style="border-top: 1px dashed gray;">
+          <div class="form-group">
+              <div class="row">
+                <div class="col-xl-6">
+                  <h4>
+                    Do you have a past history or ongoing treatment for any psychological illness?
+                  </h4>
+                </div>
+                <div class="col-xl-2">
+
+            <div class="radio_bool">
+                  <input
+                    type="radio"
+                    name="psychological_illness"
+                    value="null"
+                    checked="checked"
+                  />
+                  <input
+                    type="radio"
+                    id="inputPsychIll1"
+                    name="psychological_illness"
+                    value="no"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputPsychIll1">No</label><br />
+                </div>
+                </div>
+                <div class="col-xl-1">
+                  <div class="radio_bool">
+                  <input
+                    type="radio"
+                    id="inputPsychIll2"
+                    name="psychological_illness"
+                    value="yes"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputPsychIll2">Yes</label><br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <hr />
+          <h2>Past History</h2>
+          <div class="form-group">
+            <input
+              type="text"
+              id="inputPrevHospitalizations"
+              name="prev_hospitalizations"
+              class="form-control"
+              placeholder="Hospitalizations (including surgical procedures or OPD)"
+            />
+          </div>
+          <div class="form-group">
+              <div class="row">
+                <div class="col-xl-6">
+                  <h4>
+                    Have you had previous blood tranfusions? (If yes, attach a
+                    report at the end)
+                  </h4>
+                </div>
+                <div class="col-xl-2">
+                  <div class="radio_bool">
+                  <input
+                    type="radio"
+                    name="prev_blood_transfusion"
+                    value="null"
+                    checked="checked"
+                  />
+                  <input
+                    type="radio"
+                    id="inputPrevBloodTransfusion1"
+                    name="prev_blood_transfusion"
+                    value="no"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputPrevBloodTransfusion1">No</label><br />
+                </div>
+                </div>
+                <div class="col-xl-1">
+
+            <div class="radio_bool">
+                  <input
+                    type="radio"
+                    id="inputPrevBloodTransfusion2"
+                    name="prev_blood_transfusion"
+                    value="yes"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputPrevBloodTransfusion2">Yes</label><br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <hr />
+          <h2>Family History</h2>
+          <h4>
+            If any immediate member of your family has any of these diseases,
+            please click on them:
+          </h4>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    checked="checked"
+                    name="diabetes"
+                    value="False"
+                  />
+                  <input
+                    type="radio"
+                    id="inputDiabetes"
+                    name="diabetes"
+                    value="True"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputDiabetes">Diabetes</label><br />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    checked="checked"
+                    name="hypertension"
+                    value="False"
+                  />
+                  <input
+                    type="radio"
+                    id="inputHypertension"
+                    name="hypertension"
+                    value="True"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputHypertension">Hypertension</label><br />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    checked="checked"
+                    name="thyroid"
+                    value="False"
+                  />
+                  <input
+                    type="radio"
+                    id="inputThyroid"
+                    name="thyroid"
+                    value="True"
+                  />
+                  <label for="inputThyroid">Thyroid</label><br />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    checked="checked"
+                    name="epilepsy"
+                    value="False"
+                  />
+                  <input
+                    type="radio"
+                    id="inputEpilepsy"
+                    name="epilepsy"
+                    value="True"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputEpilepsy">Epilepsy</label><br />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    checked="checked"
+                    name="tuberculosis"
+                    value="False"
+                  />
+                  <input
+                    type="radio"
+                    id="inputTuberculosis"
+                    name="tuberculosis"
+                    value="True"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputTuberculosis">Tuberculosis</label><br />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="radio_bool radio_bool_diseases">
+                  <input
+                    type="radio"
+                    checked="checked"
+                    name="asthma"
+                    value="False"
+                  />
+                  <input
+                    type="radio"
+                    id="inputAsthma"
+                    name="asthma"
+                    value="True"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputAsthma">Asthma</label><br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+          <div class="form-group">
+            <input
+              type="text"
+              id="inputFamilyHistory"
+              name="family_history"
+              class="form-control"
+              placeholder="Any other information you'd like to provide?"
+              style="height: 100px;"
+            />
+          </div>
+          <div class="row" style="padding-top: 50px;"></div>
+          <br />
+          <hr />
+          <h2>COVID-19 Questions</h2>
+          <h4>Which of these apply to you, please click on them:</h4>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases radio_bool_COVID">
+                  <input
+                    type="radio"
+                    checked="true"
+                    name="COVID_form_fill_guy"
+                    value="null"
+                  />
+                  <input
+                    type="radio"
+                    id="inputCOVIDFormFillGuy"
+                    name="COVID_form_fill_guy"
+                    value="form_guy"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputCOVIDFormFillGuy">You have COVID-19</label
+                  ><br />
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases radio_bool_COVID">
+                  <input
+                    type="radio"
+                    id="inputCaregiver"
+                    name="COVID_form_fill_guy"
+                    value="caregiver"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputCaregiver">Caregiver to infected</label
+                  ><br />
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases radio_bool_COVID">
+                  <input
+                    type="radio"
+                    id="inputRecovered"
+                    name="COVID_form_fill_guy"
+                    value="recovered"
+                    onclick="ClearRd(this)"
+                  />
+                  <label for="inputRecovered">You have recovered</label><br />
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="radio_bool radio_bool_diseases radio_bool_COVID">
+                  <input type="radio" id="inputNOTA" name="COVID_form_fill_guy" value="NOTA" onclick="ClearRd(this)" />
+                  <label for="inputNOTA">None of the above</label><br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <div class="female" style="display: none;">
+            <div class="form-group">
+              <input
+                type="text"
+                id="inputMaritalHistory"
+                name="marital_history"
+                class="form-control"
+                placeholder="Marital History (Married, recent pregnancies, etc.)"
+                style="height: 100px;"
+              />
+            </div>
+          </div>
+          <div class="symptomsCaregiverHeader" style="display: none;">
+            <h4>
+              If you showed showed any symptoms in the last three weeks, please click on them:
+            </h4>
+          </div>
+          <div class="symptomsFormHeader" style="display: none;">
+            <h4>
+              If the patient showed any symptoms, please click on them:
+            </h4>
+          </div>
+          <div class="symptoms" style="display: none;">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xl-2">
+                  <div class="radio_bool radio_bool_diseases">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="sound_breathing"
+                      value="False"
+                    />
+                    <input
+                      type="radio"
+                      id="inputSoundBreathing"
+                      name="sound_breathing"
+                      value="True"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputSoundBreathing"
+                      >Sound While Breathing</label
+                    ><br />
+                  </div>
+                </div>
+                <div class="col-xl-2">
+                  <div class="radio_bool radio_bool_diseases">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="difficulty_breathing"
+                      value="False"
+                    />
+                    <input
+                      type="radio"
+                      id="inputDifficultyBreathing"
+                      name="difficulty_breathing"
+                      value="True"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputDifficultyBreathing"
+                      >Difficulty Breathing</label
+                    ><br />
+                  </div>
+                </div>
+                <div class="col-xl-2">
+                  <div class="radio_bool radio_bool_diseases">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="fever"
+                      value="False"
+                    />
+                    <input
+                      type="radio"
+                      id="inputFever"
+                      name="fever"
+                      value="True"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputFever">Fever (High Temperature)</label
+                    ><br />
+                  </div>
+                </div>
+                <div class="col-xl-2">
+                  <div class="radio_bool radio_bool_diseases">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="chills"
+                      value="False"
+                    />
+                    <input
+                      type="radio"
+                      id="inputChills"
+                      name="chills"
+                      value="True"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputChills">Chills or Shivering</label><br />
+                  </div>
+                </div>
+                <div class="col-xl-2">
+                  <div class="radio_bool radio_bool_diseases">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="hoarseness"
+                      value="False"
+                    />
+                    <input
+                      type="radio"
+                      id="inputHoarseness"
+                      name="hoarseness"
+                      value="True"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputHoarseness">Hoarseness of Voice</label
+                    ><br />
+                  </div>
+                </div>
+                <div class="col-xl-2">
+                  <div class="radio_bool radio_bool_diseases">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="loss_of_smell_taste"
+                      value="False"
+                    />
+                    <input
+                      type="radio"
+                      id="inputLossOfSmellTaste"
+                      name="loss_of_smell_taste"
+                      value="True"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputLossOfSmellTaste"
+                      >Loss of smell/taste</label
+                    ><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xl-2">
+                  <div class="radio_bool radio_bool_diseases">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="headache"
+                      value="False"
+                    />
+                    <input
+                      type="radio"
+                      id="inputHeadache"
+                      name="headache"
+                      value="True"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputHeadache">Headache</label><br />
+                  </div>
+                </div>
+                <div class="col-xl-2">
+                  <div class="radio_bool radio_bool_diseases">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="diarrhoea"
+                      value="False"
+                    />
+                    <input
+                      type="radio"
+                      id="inputDiarrhoea"
+                      name="diarrhoea"
+                      value="True"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputDiarrhoea">Diarrhoea</label><br />
+                  </div>
+                </div>
+                <div class="col-xl-2">
+                  <div class="radio_bool radio_bool_diseases">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="cough"
+                      value="False"
+                    />
+                    <input
+                      type="radio"
+                      id="inputCough"
+                      name="cough"
+                      value="True"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputCough">Cough</label><br />
+                  </div>
+                </div>
+                <div class="col-xl-2">
+                  <div class="radio_bool radio_bool_diseases">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="cold"
+                      value="False"
+                    />
+                    <input
+                      type="radio"
+                      id="inputCold"
+                      name="cold"
+                      value="True"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputCold">Cold</label><br />
+                  </div>
+                </div>
+                <div class="col-xl-2">
+                  <div class="radio_bool radio_bool_diseases">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="chest_pain"
+                      value="False"
+                    />
+                    <input
+                      type="radio"
+                      id="inputChestPain"
+                      name="chest_pain"
+                      value="True"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputChestPain">Chest Pain</label><br />
+                  </div>
+                </div>
+                <div class="col-xl-2">
+                  <div class="radio_bool radio_bool_diseases">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="muscle_ache"
+                      value="False"
+                    />
+                    <input
+                      type="radio"
+                      id="inputMuscleAche"
+                      name="muscle_ache"
+                      value="True"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputMuscleAche">Muscle Ache</label><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div class="form-group">
+              <input
+                type="text"
+                id="inputOtherSymptoms"
+                name="other_symptoms"
+                class="form-control"
+                placeholder="Others:"
+              />
+            </div>
+          </div>
+          <div class="meOrRecovered" style="display: none;">
+            <div class="form-group">
+              <input
+                type="text"
+                id="inputCOVIDComplaints"
+                name="COVID_complaints"
+                class="form-control"
+                placeholder="What complaints did the patient have?"
+                style="height: 100px;"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="inputCOVIDDuration"
+                name="COVID_duration_between_symptoms_and_hospital"
+                class="form-control"
+                placeholder="How long did it take the patient to report to the hospital after the onset of symptoms?"
+              />
+            </div>
+            <div class="form-group">
+                <div class="row">
+                  <div class="col-xl-6 extra">
+                    <h4>Where was the patient isolated?</h4>
+                  </div>
+                  <div class="col-xl-3">
+                    <div class="radio_bool">
+                    <input
+                      type="radio"
+                      name="COVID_isolated"
+                      value="null"
+                      checked="checked"
+                    />
+                    <input
+                      type="radio"
+                      id="inputCOVIDIsolated1"
+                      name="COVID_isolated"
+                      value="gov_facility"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputCOVIDIsolated1" style="width: fit-content;"
+                      >Government Facility</label
+                    ><br />
+                    </div>
+                  </div>
+                  <div class="col-xl-1">
+                    <div class="radio_bool">
+                    <input
+                      type="radio"
+                      id="inputCOVIDIsolated2"
+                      name="COVID_isolated"
+                      value="hospital"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputCOVIDIsolated2">Hospital</label><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="caregiverOrNOTA" style="display: none;">
+            <div class="form-group">
+              <input
+                type="text"
+                id="inputProtection"
+                name="protection"
+                class="form-control"
+                placeholder="How are you protecting yourself? (PPE, Isolation, Cleanliness)"
+                style="height: 100px;"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="inputShifts"
+                name="shifts"
+                class="form-control"
+                placeholder="How many shifts of duties do you have every week?"
+                style="height: 100px;"
+              />
+            </div>
+          </div>
+          <div class="caregiverOnly" style="display: none;">
+            <div class="form-group">
+              <input
+                type="text"
+                id="inputDifficulties"
+                name="difficulties"
+                class="form-control"
+                placeholder="What difficulties did you face while taking care of the patient?"
+                style="height: 100px;"
+              />
+            </div>
+            <div class="form-group">
+                <div class="row">
+                  <div class="col-xl-6 extra">
+                    <h4>
+                      Do you have a new residing place?
+                    </h4>
+                  </div>
+                  <div class="col-xl-2">
+                    <div class="radio_bool">
+                    <input
+                      type="radio"
+                      name="residing_place"
+                      value="null"
+                      checked="checked"
+                    />
+                    <input
+                      type="radio"
+                      id="inputResidingPlace1"
+                      name="residing_place"
+                      value="False"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputResidingPlace1">No</label><br />
+                  </div>
+                  </div>
+                  <div class="col-xl-1">
+                    <div class="radio_bool">
+                    <input
+                      type="radio"
+                      id="inputResidingPlace2"
+                      name="residing_place"
+                      value="True"
+                      onclick="ClearRd(this)"
+                    />
+                    <label for="inputResidingPlace2">Yes</label><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="recoveredOnly" style="display: none;">
+            <br />
+            <br />
+            <div class="form-group">
+              <input
+                type="text"
+                id="inputRecoveredDescription"
+                name="recovered_description"
+                class="form-control"
+                placeholder="Describe the experience. (Time at the hopsital, family support, or mindset in this situation)"
+                style="height: 100px;"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="inputRecoveredRelapses"
+                name="recovered_relapses"
+                class="form-control"
+                placeholder="Have any symptoms resurfaced? If yes, describe."
+                style="height: 100px;"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="inputRecoveredMeds"
+                name="recovered_meds"
+                class="form-control"
+                placeholder="Is the patient taking any medication since you have been discharged?"
+                style="height: 100px;"
+              />
+            </div>
+          </div>
+          <div
+            aria-labelledby="myModalLabel"
+            class="modal fade"
+            id="overlayModal"
+            role="dialog"
+            tabindex="-1"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="alert">
+                    Are you sure you want to submit the form? (You can't come
+                    back to this page)
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <input type="hidden" id="RowId" value="" />
+                  <button
+                    class="btn btn-default"
+                    data-dismiss="modal"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                  <button class="btn" id="submit-button" type="submit">
+                    Yes, submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div
+              data-toggle="modal"
+              data-target="#overlayModal"
+              name="btnSubmit"
+              class="btnContact"
+              style="text-align: center;"
+            >
+              Submit
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+<script src="static/javascript/form.js"></script>
