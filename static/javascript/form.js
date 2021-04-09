@@ -46,13 +46,6 @@ function ClearRd(o) {
   }
 }
 
-var checkedRadioDiseases;
-function ClearRdDiseases(o) {
-  if (checkedRadioDiseases == o) {
-    // o.checked = false;
-    o.value = "False";
-    checkedRadioDiseases = null;
-  } else {
-    checkedRadioDiseases = o;
+
   }
 }
