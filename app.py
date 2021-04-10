@@ -29,7 +29,6 @@ import pyttsx3
 #     SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
 
 # app.config.from_object(Config)
-
 TEMPLATE_DIR = os.path.abspath('./templates')
 STATIC_DIR = os.path.abspath('./static')
 app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
@@ -38,7 +37,7 @@ countries1 = ["India", "USA", "Canada", "Italy"]
 countries2 = ["China", "UK", "Spain", "Germany"]
 countries3 = ["France", "Turkey", "Iran", "Russia"]
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/arsh/Desktop/Development/GitHub/COVID-Detection/file.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/kandr/Desktop/Combat Covid/file.db'
 db = SQLAlchemy(app)
 
 saved = False
@@ -177,7 +176,7 @@ def create_pdf(id, email, age, sex, result, report_type):
 
 def email_to_user(receiver_email):
     port = 465  # For SSL
-    password = "Arshdeep1"
+    password = "Ksheeraj1"
 
     # Create a secure SSL context
     context = ssl.create_default_context()
@@ -531,3 +530,4 @@ def clinicalupload():
 
 if __name__ == '__main__':
     app.run(use_reloader=True, debug=True, port=5000)
+    
