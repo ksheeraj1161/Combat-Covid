@@ -11,4 +11,8 @@ The First and foremost, step is data collection. Data collection is done in two 
 One is collecting data using forms. It includes providing very detailed written form in which patient can write their symptoms and our text recognition system gathers the data. The Second one is that the patient can talk about their habits and symptoms and our speech recognition algorithm will gather the data. The Patient can use either way in which they are comfortable.
 The application then uses OpenAI to compare the data against many recorded backgrounds and symptoms to give a prediction of the Covid test Result. If there is a high probability of a positive result, the hospital technician can issue a CT scan of the patient's chest. At last, the report of the covid test will be formatted as pdf and sent to the patient through the mail. If the patient gets positive, we also suggest the medication according to their symptoms.
 Through this, the patient can know their covid test result without consulting a doctor. 
+![image](https://user-images.githubusercontent.com/60420647/114266078-da265980-9a11-11eb-81f2-81f942ed015b.png)
+![image](https://user-images.githubusercontent.com/60420647/114266087-e5798500-9a11-11eb-8679-90fe8c468b42.png)
+![image](https://user-images.githubusercontent.com/60420647/114266092-ed392980-9a11-11eb-8788-a64e9bcec581.png)
+
  
