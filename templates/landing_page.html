@@ -37,42 +37,31 @@
 
 
          <div class="row yellow">
-             <h1 class="col-md-6 col-12 align-self-center text-center collapsible">Why we created this platform?</h1>
+             <h1 class="col-md-6 col-12 align-self-center text-center collapsible">Problem statement:</h1>
              <div class="align-self-center col-md-6 col-12 content">
-                <p class="text-justify texty-font">We believe that with an appropriate amount of data, deep learning algorithms could automatically analyze <code> computed tomography (CT)</code> of the chest and the clinical history, prioritize radiology worklists, and reduce time for the diagnosis of COVID-19.
-                  Importantly, early diagnosis of COVID-19 is of critical clinical importance since the rate of morbidity is very high and the surge in the number of cases has been constantly increasing, and earlier treatment <code>improves outcomes</code> as well as alleviating burden on the healthcare system. </p>
+                <p class="text-justify texty-font">One of the main headlines and problems, related to covid was the amount of burden it put on the current health system and the front-line workers. </p>
                 </div>
               </div>
               <hr style="width:50%">
               <div class="row">
-                <h1 class="col-12 col-md-6 align-self-center text-center collapsible">How do the CT scans help?</h1>
+                <h1 class="col-12 col-md-6 align-self-center text-center collapsible">Our Idea:</h1>
                 <div class="align-self-center col-md-6 col-12 content">
-                   <p class="text-justify texty-font">Computed tomography (CT) scans of the chest gives us the <code>key features helping</code>  in the diagnosis of COVID-19, and the timing of diagnosis, therefore, depends on how quickly a chest CT is both completed and subsequently interpreted by a clinician.
-                    Automatic triage of imaging studies using computer algorithms has the potential to <code>detect COVID-19  earlier</code>, ultimately leading to improved clinical outcomes. Such a quality improvement tool could be used to automatically manage the priority for interpretation of imaging studies with presumed COVID-19 and help 
-                    <code>optimize radiology workflow.</code> Machine learning and computer vision are among a suite of techniques for teaching computers to learn and detect patterns.</p>
+                   <p class="text-justify texty-font">So, our idea is to work on introducing a covid testing procedure with the power of AI using convolutional neural network, to automatically decide whether the patient has covid or not. We believe that with an appropriate amount of data, deep learning algorithms could automatically analyse computed tomography (CT) of the chest and the clinical history, prioritize radiology worklists, and reduce the time for the diagnosis of COVID-19. </p>
                    </div>
                  </div>
                  <hr style="width:50%">
               <div class="row yellow">
-                <h1 class="col-md-6 col-12 align-self-center text-center collapsible">Where do we go from here?</h1>
+                <h1 class="col-md-6 col-12 align-self-center text-center collapsible">Implementation of our idea:</h1>
                 <div class="align-self-center col-md-6 col-12 content">
-                   <p class="text-justify texty-font">We strongly believe that in the <code>new era</code> of big data and artficial intelligence 
-                    can play a pivotal role in overcoming many problems. Several strides have already been made to lend a helping hand in the diagnosis, 
-                    indentification and risk-evaluation of a patient. 
-                    However, these solutions as well as those in the coming future are heavily dependent on the availability of data. 
-                    We aim to extend our reach to individuals who may have relevant information about any patient including demographics, history, experiences, 
-                    symptoms and medical documents. A <a href="/form">comprehensive set of fields</a> will enable us to gather fresh data and  observe new patterns. 
-                    We hope that our efforts will contribute towards <code>improving exisiting technologies</code> or perhaps sow the seeds of the next big idea.
+                   <p class="text-justify texty-font">First and foremost, step is data collection. Data collection is done in two different methods.
+                    One is collecting data using forms. It includes providing very detailed written form in which patient can write their symptoms and our text recognition system gathers the data. Second one is that the patient can talk about their habits and symptoms and our speech recognition algorithm will gather the data. Patient can use either way in which they are comfortable with.
+                    The application then uses OpenAI to compare the data against many recorded backgrounds and symptoms to give a prediction of the Covid test Result. If there is a high probability of a positive result, the hospital technician can issue a CT scan of the patient's chest. At last, the report of the covid test will be formatted as pdf and sent to the patient through mail. If the patient gets positive, we also suggest the medication according to their symptoms.
+                    Through this, the patient can know their covid test result without consulting a doctor. 
+                    
                   </p>
                    </div>
                  </div>    
 
-       <hr style="width:50%">
-       <div class="row">
-        <h1 class="col-md-6 col-12 align-self-center text-center collapsible">Why even collect data?</h1>
-        <div class="align-self-center col-md-6 col-12 content">
-          <p class="text-justify texty-font">We understand how important data is in today's world. It is only through data analysis that one can reach various groundbreaking conclusions about almost everything in today's world. We considered it our primary goal to create a dataset for future machine learning engineers.</p>
-       </div>
 
    </div> 
         <script src="static/javascript/landing_page.js"></script>
